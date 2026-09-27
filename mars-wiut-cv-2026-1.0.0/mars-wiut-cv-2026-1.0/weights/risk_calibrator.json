@@ -1,0 +1,11 @@
+{
+ "features": ["max_pair", "ttc_score", "closing", "log_drac", "iou_rise", "brake", "brake_conflict", "swerve", "flow_anom", "log_conflicts", "pair_max_1s", "pair_rise"],
+ "mean": [0.059868, 0.112585, 0.070854, 0.168465, 0.015603, 0.049466, 0.012757, 0.065569, 0.017967, 0.216816, 0.112145, 0.002445],
+ "std": [0.153234, 0.255374, 0.178082, 0.455738, 0.041406, 0.168653, 0.085871, 0.134441, 0.117984, 0.48888, 0.223362, 0.140002],
+ "w": [0.067968, -0.129051, -0.081023, -0.079269, -0.323658, -0.117596, 0.116991, 0.002171, -0.192817, -0.32025, -0.063545, 0.185448],
+ "b": -1.719204,
+ "config": {"alarm_on": 0.25, "alarm_hold": 2.5},
+ "train": {"source": "Kaggle notebook solikhadagarova/notebook0cee613149 version 2 (day3 run), out/cal_noflow.json",
+           "frames": 31777, "positives": 6241, "auc": 0.5972, "prob_mean": 0.1753, "prob_std": 0.0661,
+           "balance": false, "neg_weight": 3.0, "flow_prior": false}
+}

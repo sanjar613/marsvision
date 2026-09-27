@@ -1,0 +1,12 @@
+.git/
+.vscode/
+MarsVision/
+node_modules/
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.venv/
+**/venv/
+mars-wiut-cv-2026-1.0/

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# yolo11s.pt (19 MB) is committed so the offline run needs nothing else; yolo11n is dev-only
+weights/yolo11n.pt
+
+# data and experiment outputs (made on Kaggle, not part of the package)
+samples/
+cache/
+dev/
+out/
+plots/
+videos/
+*.npz
+*.jsonl
+predictions_run2.json
+
+.DS_Store

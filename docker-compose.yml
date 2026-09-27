@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./MarsVision:/app
+    environment:
+      VITE_API_PROXY_TARGET: http://backend:8000
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host"
+
+  backend:
+    image: python:3.10-slim
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+      - ./mars-wiut-cv-2026-1.0.0/mars-wiut-cv-2026-1.0:/opt/marsvision-cv:ro
+    environment:
+      PYTHONPATH: /opt/marsvision-cv:/app
+    ports:
+      - "8000:8000"
+    command: sh -c "pip install -r requirements.txt && python main.py"
